@@ -1,0 +1,12 @@
+[
+  { "topic": "Maths Tuition", "location": "Rose Hill", "teacher": "Priya Ramgoolam", "price": 800, "space": 5, "icon": "fa-solid fa-calculator" },
+  { "topic": "Sega Dance", "location": "Curepipe", "teacher": "Kevin Baptiste", "price": 600, "space": 5, "icon": "fa-solid fa-music" },
+  { "topic": "Swimming", "location": "Quatre Bornes", "teacher": "Rajesh Beeharry", "price": 900, "space": 5, "icon": "fa-solid fa-person-swimming" },
+  { "topic": "French Classes", "location": "Port Louis", "teacher": "Marie-Claire Lagesse", "price": 700, "space": 5, "icon": "fa-solid fa-language" },
+  { "topic": "Football", "location": "Vacoas", "teacher": "Rajesh Beeharry", "price": 500, "space": 5, "icon": "fa-solid fa-futbol" },
+  { "topic": "Art Club", "location": "Moka", "teacher": "Marie-Claire Lagesse", "price": 650, "space": 5, "icon": "fa-solid fa-palette" },
+  { "topic": "Chess", "location": "Rose Hill", "teacher": "Priya Ramgoolam", "price": 450, "space": 5, "icon": "fa-solid fa-chess" },
+  { "topic": "Robotics", "location": "Ebene", "teacher": "Anushka Doorgakant", "price": 1200, "space": 5, "icon": "fa-solid fa-robot" },
+  { "topic": "Creole Heritage", "location": "Grand Baie", "teacher": "Kevin Baptiste", "price": 550, "space": 5, "icon": "fa-solid fa-book-open" },
+  { "topic": "Piano", "location": "Flic en Flac", "teacher": "Anushka Doorgakant", "price": 1000, "space": 5, "icon": "fa-solid fa-music" }
+]
