@@ -1,12 +1,12 @@
 [
-  { "topic": "Maths Tuition", "location": "Rose Hill", "teacher": "Priya Ramgoolam", "price": 800, "space": 5, "icon": "fa-solid fa-calculator" },
-  { "topic": "Sega Dance", "location": "Curepipe", "teacher": "Kevin Baptiste", "price": 600, "space": 5, "icon": "fa-solid fa-music" },
-  { "topic": "Swimming", "location": "Quatre Bornes", "teacher": "Rajesh Beeharry", "price": 900, "space": 5, "icon": "fa-solid fa-person-swimming" },
-  { "topic": "French Classes", "location": "Port Louis", "teacher": "Marie-Claire Lagesse", "price": 700, "space": 5, "icon": "fa-solid fa-language" },
-  { "topic": "Football", "location": "Vacoas", "teacher": "Rajesh Beeharry", "price": 500, "space": 5, "icon": "fa-solid fa-futbol" },
-  { "topic": "Art Club", "location": "Moka", "teacher": "Marie-Claire Lagesse", "price": 650, "space": 5, "icon": "fa-solid fa-palette" },
-  { "topic": "Chess", "location": "Rose Hill", "teacher": "Priya Ramgoolam", "price": 450, "space": 5, "icon": "fa-solid fa-chess" },
-  { "topic": "Robotics", "location": "Ebene", "teacher": "Anushka Doorgakant", "price": 1200, "space": 5, "icon": "fa-solid fa-robot" },
-  { "topic": "Creole Heritage", "location": "Grand Baie", "teacher": "Kevin Baptiste", "price": 550, "space": 5, "icon": "fa-solid fa-book-open" },
-  { "topic": "Piano", "location": "Flic en Flac", "teacher": "Anushka Doorgakant", "price": 1000, "space": 5, "icon": "fa-solid fa-music" }
+  { "topic": "Art Club", "location": "Moka", "teacher": "Simone Davinci", "price": 650, "space": 5, "icon": "fa-solid fa-palette", "image": "art-club.jpg" },
+  { "topic": "Literature", "location": "Rose Hill", "teacher": "Laura Fareed", "price": 600, "space": 5, "icon": "fa-solid fa-book", "image": "literature.jpg" },
+  { "topic": "History", "location": "Grand Baie", "teacher": "Onika Maraj", "price": 600, "space": 5, "icon": "fa-solid fa-landmark", "image": "history.jpg" },
+  { "topic": "Tennis", "location": "Vacoas", "teacher": "Andy N", "price": 900, "space": 5, "icon": "fa-solid fa-table-tennis-paddle-ball", "image": "tennis.jpg" },
+  { "topic": "French Classes", "location": "Port Louis", "teacher": "Simone Davinci", "price": 700, "space": 5, "icon": "fa-solid fa-language", "image": "french.jpg" },
+  { "topic": "Further Maths", "location": "Rose Hill", "teacher": "Laura Fareed", "price": 850, "space": 5, "icon": "fa-solid fa-square-root-variable", "image": "further-maths.jpg" },
+  { "topic": "Violin Classes", "location": "Flic en Flac", "teacher": "Jasmine Bieber", "price": 1100, "space": 5, "icon": "fa-solid fa-music", "image": "violin.jpg" },
+  { "topic": "Piano Classes", "location": "Ebene", "teacher": "Jasmine Bieber", "price": 1000, "space": 5, "icon": "fa-solid fa-music", "image": "piano.jpg" },
+  { "topic": "Dancehall", "location": "Curepipe", "teacher": "Onika Maraj", "price": 600, "space": 5, "icon": "fa-solid fa-record-vinyl", "image": "dancehall.jpg" },
+  { "topic": "Swimming", "location": "Quatre Bornes", "teacher": "Andy N", "price": 900, "space": 5, "icon": "fa-solid fa-person-swimming", "image": "swimming.jpg" }
 ]
