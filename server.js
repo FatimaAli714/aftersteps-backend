@@ -1,5 +1,6 @@
 require('dotenv').config();                 // loads MONGO_URI from the .env file (local only)
 const express = require('express');
+const path = require('path');
 const { MongoClient, ObjectId } = require('mongodb');
 
 const app = express();
@@ -21,6 +22,16 @@ app.use((req, res, next) => {
   res.header('Access-Control-Allow-Headers', 'Content-Type');
   if (req.method === 'OPTIONS') return res.sendStatus(204);   // answer the browser's "permission check" request
   next();
+});
+
+// ---------- Middleware 3: static files (lesson images) ----------
+// A request like /images/tennis.jpg is answered with the file /images/tennis.jpg from the "images" folder.
+app.use('/images', express.static(path.join(__dirname, 'images')));
+
+// If express.static did not find the file, the request falls through to here
+// and we send an error message instead of the image.
+app.use('/images', (req, res) => {
+  res.status(404).json({ error: 'Image not found' });
 });
 
 let db;   // will hold the connection to the "aftersteps" database
