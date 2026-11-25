@@ -100,6 +100,28 @@ app.put('/lessons/:id', async (req, res) => {
   }
 });
 
+// ---------- Route: GET /search?q=... ----------
+// Returns the lessons where the search text appears in the topic, location, teacher, price or space.
+// Example: /search?q=rose finds every lesson held in Rose Hill.
+app.get('/search', async (req, res) => {
+  try {
+    const q = (req.query.q || '').trim().toLowerCase();   // the text after ?q=
+    const lessons = await db.collection('lesson').find({}).toArray();
+
+    if (q === '') return res.json(lessons);               // empty search: return everything
+
+    const results = lessons.filter(lesson => {
+      // turn every value into text so numbers like 900 can be searched too
+      const values = [lesson.topic, lesson.location, lesson.teacher, String(lesson.price), String(lesson.space)];
+      return values.some(value => value.toLowerCase().includes(q));
+    });
+    res.json(results);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: 'Could not search lessons' });
+  }
+});
+
 // ---------- Route: GET /enrolment/:lessonid ----------
 // Returns how many spaces have already been bought for one lesson, by adding up all the orders
 app.get('/enrolment/:lessonid', async (req, res) => {
