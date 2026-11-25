@@ -100,6 +100,39 @@ app.put('/lessons/:id', async (req, res) => {
   }
 });
 
+// ---------- Route: GET /enrolment/:lessonid ----------
+// Returns how many spaces have already been bought for one lesson, by adding up all the orders
+app.get('/enrolment/:lessonid', async (req, res) => {
+  try {
+    const lessonId = req.params.lessonid;
+    if (!ObjectId.isValid(lessonId)) {
+      return res.status(400).json({ error: 'Invalid lesson id' });
+    }
+
+    // Make sure the lesson exists, so we can tell "0 bought" apart from "no such lesson"
+    const lesson = await db.collection('lesson').findOne({ _id: new ObjectId(lessonId) });
+    if (!lesson) {
+      return res.status(404).json({ error: 'Lesson not found' });
+    }
+
+    // Find every order that has this lesson somewhere in its items list
+    const orders = await db.collection('order').find({ 'items.lessonID': lessonId }).toArray();
+
+    // Add up the spaces bought for THIS lesson (an order may also contain other lessons)
+    let enrolled = 0;
+    orders.forEach(order => {
+      order.items.forEach(item => {
+        if (item.lessonID === lessonId) enrolled += item.spaces;
+      });
+    });
+
+    res.json({ lessonId: lessonId, topic: lesson.topic, enrolled: enrolled });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: 'Could not get enrolment' });
+  }
+});
+
 // ---------- Start: connect to MongoDB first, then listen for requests ----------
 async function start() {
   try {
