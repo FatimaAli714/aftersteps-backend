@@ -57,7 +57,7 @@ app.post('/orders', async (req, res) => {
 
     // The server checks the data too, because anyone can send a request without using our front-end
     const nameOk = typeof name === 'string' && /^[A-Za-z]+( [A-Za-z]+)*$/.test(name.trim());
-    const phoneOk = typeof phone === 'string' && /^[0-9]{7,15}$/.test(phone.trim());
+    const phoneOk = typeof phone === 'string' && /^[0-9]{8}$/.test(phone.trim());
     const itemsOk = Array.isArray(items) && items.length > 0;
     if (!nameOk || !phoneOk || !itemsOk) {
       return res.status(400).json({ error: 'Invalid order: check name, phone and items' });
