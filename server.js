@@ -100,6 +100,18 @@ app.put('/lessons/:id', async (req, res) => {
   }
 });
 
+// ---------- Route: GET /teachers ----------
+// Returns every teacher (first name, last name, bio and the lessons they teach)
+app.get('/teachers', async (req, res) => {
+  try {
+    const teachers = await db.collection('teacher').find({}).toArray();
+    res.json(teachers);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: 'Could not fetch teachers' });
+  }
+});
+
 // ---------- Route: GET /search?q=... ----------
 // Returns the lessons where the search text appears in the topic, location, teacher, price or space.
 // Example: /search?q=rose finds every lesson held in Rose Hill.

@@ -1,0 +1,7 @@
+[
+  { "firstName": "Simone", "lastName": "Davinci", "bio": "A painter and former primary-school teacher who believes every child can be an artist. She also teaches French through songs and games.", "lessons": ["Art Club", "French Classes"] },
+  { "firstName": "Laura", "lastName": "Fareed", "bio": "A patient tutor who loves stories and numbers equally. She helps students build confidence in reading, writing and problem solving.", "lessons": ["Literature", "Further Maths"] },
+  { "firstName": "Onika", "lastName": "Maraj", "bio": "A history enthusiast who brings the past to life with stories about Mauritius and the world. She also leads high-energy Dancehall sessions.", "lessons": ["History", "Dancehall"] },
+  { "firstName": "Andy", "lastName": "N", "bio": "A former club athlete who coaches with a focus on fun and fitness. Beginners are always welcome on the court and in the pool.", "lessons": ["Tennis", "Swimming"] },
+  { "firstName": "Jasmine", "lastName": "Bieber", "bio": "A classically trained musician who teaches violin and piano to all ages, with a gentle approach that keeps practice enjoyable.", "lessons": ["Violin Classes", "Piano Classes"] }
+]
